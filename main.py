@@ -17,12 +17,12 @@ from model import *
 
 # Directories
 data_directory = r'C:\Users\giova\Python_Projects\MeshGraphNet\data'
-data = np.load(data_directory + '\db_reduced_2000_compressible.npy', allow_pickle = True).item()
+data = np.load(data_directory + '\db_reduced_total4000_compressible.npy', allow_pickle = True).item()
 data_test = np.load(data_directory + '\db_reduced_random2000_compressible.npy', allow_pickle = True).item()
 
 #Options
-train_model = False
-predict_test = True
+train_model = True
+predict_test = False
 
 #Pre process dataset 
 dataset = create_dataset(data)

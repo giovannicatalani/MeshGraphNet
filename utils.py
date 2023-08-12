@@ -148,3 +148,7 @@ def build_optimizer(args, params):
     elif args.opt_scheduler == 'cos':
         scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.opt_restart)
     return scheduler, optimizer
+
+class objectview(object):
+    def __init__(self, d):
+        self.__dict__ = d
